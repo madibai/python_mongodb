@@ -14,7 +14,7 @@ def start():
 
     all_posts = db.posts.find()
     for post in all_posts:
-        print(post)
+        print("author {} and title {}".format(post.get('author'), post.get('title')))
 
 
 def insertPost(db):
